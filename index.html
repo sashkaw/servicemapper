@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Service Mapper</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div class="container" id="map-canvas" style="height:800px;">
+        <div id="map">
+        </div>
+    </div>
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+     NOTE: Need to replace API key with real API key
+    -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlVDvIp21L7WQlreLmz1I7zoTUTQcFo5Q&callback=initMap&v=weekly&libraries=geometry,places"
+      defer
+    ></script>
+    <!--Pass site data to script-->
+    <script src="./dist/main.js"></script>
+  </body>
+</html>
